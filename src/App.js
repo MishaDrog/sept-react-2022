@@ -1,5 +1,6 @@
-import {Simpson} from "./components/Simpson/Simpson";
+//import {Simpson} from "./components/Simpson/Simpson";
 import {Simpsons} from "./components/Simpsons/Simpsons";
+import {Characters} from "./components/Characters/Characters";
 
 const App = () => {
 
@@ -7,6 +8,7 @@ const App = () => {
     return (
         <div>
             <Simpsons/>
+            <Characters/>
         </div>
     );
 };
