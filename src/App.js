@@ -1,9 +1,10 @@
+import {Count} from "./components/Count/Count";
 
 
 const App = () => {
     return (
         <div>
-            App
+            <Count/>
         </div>
     );
 };
