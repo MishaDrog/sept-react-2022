@@ -8,7 +8,7 @@ const Count = () => {
 
 
     const inc = ()=>{
-        setB(b+1);
+        setB(prevState => prevState+1);
 
     }
 
