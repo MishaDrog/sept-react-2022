@@ -3,20 +3,19 @@ import {useState} from "react";
 
 const Count = () => {
 
-    const [b, setB] = useState();
+    const [b, setB] = useState(0);
     console.log('Count');
-    let a = 0;
+
 
     const inc = ()=>{
-        a +=1
-        setB(a);
-        console.log(a);
+        setB(b+1);
+
     }
 
     return (
         <div>
             <div>
-                <div>A: {a}</div>
+                <div>B: {b}</div>
                 <button onClick={()=>inc()}>Inc</button>
             </div>
         </div>
