@@ -7,16 +7,12 @@ const Count = () => {
     console.log('Count');
 
 
-    const inc = ()=>{
-        setB(prevState => prevState+1);
-
-    }
 
     return (
         <div>
             <div>
                 <div>B: {b}</div>
-                <button onClick={()=>inc()}>Inc</button>
+                <button onClick={()=> setB(prevState => prevState+1)}>Inc</button>
             </div>
         </div>
     );
