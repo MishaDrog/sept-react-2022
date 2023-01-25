@@ -1,15 +1,15 @@
-import User from "../User/User";
-import {useState} from "react";
+import {User} from "../User/User";
 
 const Users = () => {
-    const [users, setUsers] = useState([])
+    let users = [];
 
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(value => value.json())
-        .then(value => setUsers(value))
+        .then(value => users=value)
+
     return (
         <div>
-            {users.map(user=><User key={user.id} user={user}/>)}
+            {users.map(user=> <User key={user.id} user={user}/>)}
         </div>
     );
 };
