@@ -1,13 +1,11 @@
 import {User} from "../User/User";
 import {useEffect, useState} from "react";
-import axios from "axios";
-import {axiosService} from "../services/axiosService";
 import {userService} from "../services/userService";
 
 const Users = () => {
     const [users, setUsers] = useState([]);
-
     const [count, setCount] = useState(0);
+    const [userDetails,setUserDetails] = useState(null);
 
     useEffect(()=>{
 
@@ -17,13 +15,15 @@ const Users = () => {
 
     },[count])
 
-
-
     return (
 
         <div>
-            <button onClick={()=>setCount(prevState => prevState+1)}>Click </button>
-            {users.map(user=> <User key={user.id} user={user}/>)}
+            <h1>UserDetails:</h1>
+            {userDetails && <User user={userDetails}/>}
+
+            <h1>Users:</h1>
+            </*button onClick={()=>setCount(prevState => prevState+1)}>Click </button*/>
+            {users.map(user => <User key={user.id} user={user} setUserDetails={setUserDetails()}/>)}
         </div>
     );
 };

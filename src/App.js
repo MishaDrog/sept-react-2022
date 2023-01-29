@@ -1,13 +1,14 @@
 
 
 
-import {SingleUser} from "./components/SingleUser/SinglleUser";
+
+import {User} from "./components/User/User";
+import {Users} from "./components/Users/Users";
 
 const App = () => {
     return (
         <div>
-
-            <SingleUser/>
+            <Users/>
         </div>
     );
 };
